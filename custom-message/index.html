@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Helping Chat Form</title>
+    <style>
+		.chat-form {
+			background-color: red;
+			width: 500px;
+			padding:10px;
+			border-radius: 10px;
+			margin-left:150px;
+		}
+    </style>
+  </head>
+  <body>
+    <template id="custom-message-template">
+		<form class="cf">
+		  <div class="custom-message">
+			<img class="profile-photo" src="profile-photo.png" alt="Profile Photo" />
+			<span class="author"></span>
+			<span class="timestamp"></span>
+			<p class="content"></p>
+		  </div>
+		</form>
+	  <style>
+		.profile-photo {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			margin-right: 10px;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+		.cf{
+			background-color: white;
+			width: 300px;
+			height:80px;
+			margin:20px;
+			border-radius: 4px;
+		}
+		.timestamp {
+			font-size: 55%;
+			opacity: 0.5;
+		}
+
+		.author {
+			font-weight: 700;
+		}
+
+		.content {
+			margin: 0px;
+			font-family: "Times New Roman", Times, serif;
+			font-size: 20px;
+			margin-left:10px;
+			margin-top:5px
+			
+		}
+	  </style>
+    </template>
+
+    <form class="chat-form">
+      <custom-message
+        author="Helper"
+        timestamp="10:00 AM"
+      >How can I help you?</custom-message>
+      <custom-message
+        author="Me"
+        timestamp="10:02 AM"
+      >How to make a donation?</custom-message>
+      <custom-message
+        author="Helper"
+        timestamp="10:03 AM"
+      >Click here</custom-message>
+      <custom-message
+        author="Me"
+        timestamp="10:03 AM"
+      >Thank you</custom-message>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
